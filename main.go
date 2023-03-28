@@ -34,14 +34,7 @@ func main() {
 			"arr":   arr,
 		})
 	})
-	http.HandleFunc("/articles", func(w http.ResponseWriter, r *http.Request) {
-		_ = temp.ExecuteTemplate(w, "articles.gohtml", map[string]any{
-			"title": "Статьи",
-		})
-	})
-	http.HandleFunc("/afisha", func(w http.ResponseWriter, r *http.Request) {
-		w.Write([]byte("AFISHA"))
-	})
+	http.Handle("/static", http.FileServer(http.Dir("./html")))
 
 	_ = http.ListenAndServe(":3333", nil)
 }
