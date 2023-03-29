@@ -23,6 +23,15 @@ func main() {
 		panic(err)
 	}
 
+	http.Handle(
+		"/static/",
+		http.StripPrefix(
+			"/static/",
+			http.FileServer(
+				http.Dir("./html"),
+			),
+		),
+	)
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		arr := []string{
 			"одын",
@@ -33,8 +42,8 @@ func main() {
 			"title": "Привет мир!!!!",
 			"arr":   arr,
 		})
+
 	})
-	http.Handle("/static", http.FileServer(http.Dir("./html")))
 
 	_ = http.ListenAndServe(":3333", nil)
 }
