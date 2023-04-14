@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+<head>
+  <script src="color-modes.js"></script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Author Name">
+  <title>Carousel Template · Bootstrap v5.3</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+
+  <meta name="theme-color" content="#712cf9">
+
+  <!-- Custom styles for this template -->
+  <link href="style.css" rel="stylesheet">
+  <link href="carousel.css" rel="stylesheet">
+
+</head>
+<body>
+<header data-bs-theme="dark">
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">GolangMaster</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+              aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">Disabled</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+  <div class="container marketing pt-4">
+    <!-- Начинается список статей -->
+
+    <div class="row g-5 article-list-item">
+      <div class="col">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-primary">Электрогитара</strong>
+            <h3 class="mb-0">Правильный Palm Mute</h3>
+            <div class="mb-1 text-body-secondary">30.02.2023</div>
+            <p class="card-text mb-auto">
+              Сегодня мы хотим поговорить про чистоту вашей игры. А конкретно — про дополнительное глушение струн, не
+              участвующих в игре в определенный момент времени. Если вы извлечете ноту на любой открытой струне, то
+              заметите, что резонанс так или иначе передается на соседние струны. Когда вы играете на чистом звуке или
+              легком перегрузе, подобная грязь не особо бросается в глаза — обычно эффект подобных нежелательных
+              вибраций замечают хай-гейн-парни. Но поверьте, если вы от них избавитесь, то даже на «клине» почувствуете,
+              что играла ваша стала чище. Для этого надо привить себе очень простую привычку: глушить все струны кроме
+              той, которую в данный момент «атакуете».
+            </p>
+            <a href="#" class="stretched-link">Читать далее</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <img style="height: 1px"
+                 src="data:image/jpeg;base64,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"
+                 alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-5 article-list-item">
+      <div class="col">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <!-- тег статьи, раздел, категория -->
+            <strong class="d-inline-block mb-2 text-primary">
+              Акустика
+            </strong>
+            <!-- заголовок статьи -->
+            <h3 class="mb-0">
+              Как новичку выбрать хорошую гитару
+            </h3>
+            <!-- дата публикации -->
+            <div class="mb-1 text-body-secondary">
+              30.02.2023
+            </div>
+            <!-- короткий текст, вступление -->
+            <p class="card-text mb-auto">
+              Как новичку выбрать хорошую гитару?
+              Для новичка, желающего освоить игру на гитаре, самым предпочтительным является простой вариант инструмента
+              с шестью струнами. На начальном этапе обучения не рекомендуются электрогитары, а также электроакустические
+              версии, да ещё и с непопулярным количеством струн. Сейчас музыкальный рынок предлагает «экзотические»
+              инструменты с семью, восемью, девятью и двенадцатью струнами. Однако большая часть песен написана именно
+              под шесть струн, что облегчит обучение и не сделает его запутанным.
+            </p>
+            <!-- ссылка для перехода на старницу статьи, для чтения -->
+            <a href="#" class="stretched-link">Читать далее</a>
+          </div>
+          <!-- картинка статьи, ее может и не быть =) -->
+          <div class="col-auto d-none d-lg-block">
+            <img style="height: 1px" src="https://pimaschool.ru/upload/medialibrary/511/kak_vibrat_gitaru.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- / список статей -->
+
+    <!-- JavaScript для оптимизации высоты картинки в списке -->
+    <script type="text/javascript">
+      document.addEventListener('DOMContentLoaded', () => {
+        const list = document.getElementsByClassName('article-list-item')
+        for (let i = 0; i < list.length; i++) {
+          const item = list[i]
+          console.log('item', item, item.offsetHeight)
+          let images = item.getElementsByTagName('img')
+          if (images.length === 1) {
+            images[0].style.height = `${item.offsetHeight}px`
+          }
+          console.log('img', item.getElementsByTagName('img'))
+        }
+      })
+    </script>
+    <!-- / JavaScript для оптимизации высоты картинки в списке -->
+  </div><!-- /.container -->
+
+
+  <!-- FOOTER -->
+  <footer class="container">
+    <p class="float-end"><a href="#">Back to top</a></p>
+    <p>&copy; 2017–2023 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+  </footer>
+</main>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+        crossorigin="anonymous"></script>
+
+
+</body>
+</html>
